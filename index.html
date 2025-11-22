@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fikri Musa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-microchip"></i>
+                    <span>My Portfolio</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="blog.html" target="_blank">Time Machine</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="typewriter" id="typewriter-text"></h1>
+                <p></p>
+                <a href="#projects" class="btn">Explore My Projects</a>
+                <a href="#about" class="btn">Who Am I?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Software Developer</h3>
+                    <p class="justified">As an Electronics Engineering graduate with experience in photonic research, my career began at the intersection of hardware and software, prototyping IoT devices and machine vision systems. A sudden career shift during the pandemic ignited my passion for deep learning in computer vision, successfully pivoting me into the tech industry.</p>
+                    <p class="justified">My journey has taken me from building embedded systems and backend data solutions for AI hardware. I'm passionate about writing clean, efficient code and am constantly exploring new technologies. I am eager to collaborate on innovative and challenging projects, leveraging my full-stack embedded expertise to contribute from concept to deployment.</p>
+                    <p class="justified">When I'm not coding, you can find me leading teams as a strategic shot-caller in Mobile Legends, staying active through badminton and futsal, or fueling my growth with self-help and professional development books.</p>
+                    <div class="skills">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Modern C++ (C++11/14/17)</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">IoT Solutions</span>
+                        <span class="skill-tag">MQTT</span>
+                        <span class="skill-tag">Node-RED</span>
+                        <span class="skill-tag">BLE</span>
+                        <span class="skill-tag">RTOS</span>
+                        <span class="skill-tag">Machine & Deep Learning</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                <img class="rounded-pic" src= "unnamed.jpg" alt="Description of the image">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Raspberry Pi Sensor Integration & AI Dashboard</h3>
+                    <p>Interfacing three different sensors with Raspberry Pi through different protocols, presenting the sensor data and integrating an AI model on a dashboard.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Javascript</span>
+                        <span>Rasperry Pi</span>
+                        <span>Computer Vision</span>
+                        <span>Node-RED</span>
+                        <span>MQTT</span>
+
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/fikrimusa/CDLE-Mini-Project" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Universal MQTT Data Historian</h3>
+                    <p>A real-time IoT data storage platform that captures MQTT messages and stores them in SQLite database for historical analysis and data persistence.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>MQTT</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/fikrimusa/UniversalMQTTDataHistorian" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Smartwatch Simulator</h3>
+                    <p>Simulate a smartwatch with FreeRTOS tasks using ESP-IDF’s QEMU emulator (no hardware needed).</p>
+                    <div class="project-tech">
+                        <span>C</span>
+                        <span>FreeRTOS</span>
+                        <span>QEMU</span>
+                        <span>ESP32 Emulator</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/fikrimusa/smartwatch_simulator" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-preview">
+                <h3>Time Machine = Knowledge</h3>
+                <p>Explore my writings where I share personal insights, philosophical thoughts, and reflections on life, habits, and the pursuit of knowledge. Join me as I explore ideas about how knowledge can become our ultimate time machine.</p>
+                <a href="blog.html" target="_blank" class="btn">Visit My Time Machine</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Let's Work Together!</h2>
+            <div class="contact-content" style="display: flex; justify-content: center;">
+                <form class="contact-form" style="width: 100%; max-width: 500px;">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/fikrimusa"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/fikrimusa/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Fikri Musa.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

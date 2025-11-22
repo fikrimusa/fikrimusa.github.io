@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Machine = Knowledge | Coming Soon</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Light Theme (Default) */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1d4ed8;
+            --bg-color: #ffffff;
+            --card-bg: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dark Theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #58a6ff;
+                --secondary: #1f6feb;
+                --bg-color: #0d1117;
+                --card-bg: #161b22;
+                --text-primary: #f0f6fc;
+                --text-secondary: #8b949e;
+                --border: #30363d;
+                --shadow: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+            .nav-links li {
+                margin-left: 2rem;
+            }
+
+            .nav-links a {
+                color: var(--text-primary);
+                text-decoration: none;
+                transition: color 0.3s;
+                padding: 0.5rem 1rem;
+                border-radius: 6px;
+            }
+
+                .nav-links a:hover {
+                    color: var(--primary);
+                    background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+                }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .coming-soon-content {
+            max-width: 600px;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .coming-soon h1 {
+            font-size: 2.0rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .coming-soon h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .coming-soon p {
+            font-size: 1.0rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+            .btn:hover {
+                background-color: var(--primary);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px color-mix(in srgb, var(--primary) 30%, transparent);
+            }
+
+        /* Construction Animation */
+        .construction {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* System Theme Indicator */
+        .theme-indicator {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: color-mix(in srgb, var(--primary) 10%, transparent);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            margin-top: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+            .social-links a {
+                color: var(--text-secondary);
+                font-size: 1.5rem;
+                transition: color 0.3s;
+            }
+
+                .social-links a:hover {
+                    color: var(--primary);
+                }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .coming-soon h1 {
+                font-size: 2.5rem;
+            }
+
+            .coming-soon h2 {
+                font-size: 1.4rem;
+            }
+
+            .coming-soon-content {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Time Machine</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Go Back to Portfolio</a></li>
+                    <li><a href="#home">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon" id="home">
+        <div class="container">
+            <div class="coming-soon-content">
+                <div class="construction">
+                    🚧
+                </div>
+                <h1>Time Machine = Knowledge</h1>
+                <h2>Coming Soon</h2>
+                <p>
+                    I'm currently building something special here - a collection of thoughts on how knowledge transforms
+                    our relationship with time, habits, and personal growth.
+                    <br><br>
+                    The equation is being solved. The time machine is being built.
+                </p>
+                <a href="index.html" class="btn">Back to Portfolio</a>
+
+                <div class="theme-indicator">
+                    <i class="fas fa-desktop"></i> Using your system's theme preference
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/fikrimusa"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/fikrimusa/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Fikri Musa.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Optional: Add theme detection display
+        document.addEventListener('DOMContentLoaded', function () {
+            const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const themeIndicator = document.querySelector('.theme-indicator');
+
+            if (themeIndicator) {
+                themeIndicator.innerHTML =
+                    `<i class="fas fa-${isDarkMode ? 'moon' : 'sun'}"></i> Using your system's ${isDarkMode ? 'dark' : 'light'} theme`;
+            }
+        });
+    </script>
+</body>
+</html>
