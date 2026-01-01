@@ -1,7 +1,12 @@
-// Simple Working Typing Animation
-document.addEventListener('DOMContentLoaded', function () {
+// Optimized JavaScript for Portfolio
+document.addEventListener('DOMContentLoaded', () => {
+    // Typewriter Effect
     const typewriterElement = document.getElementById('typewriter-text');
-    const words = ["Software Developer", "Every line of code tells a story..."];
+    const words = [
+        "Software Developer",
+        "Modern C++ Enthusiast"
+    ];
+
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -14,93 +19,114 @@ document.addEventListener('DOMContentLoaded', function () {
             // Deleting text
             typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 50; // Faster when deleting
+            typingSpeed = 50;
         } else {
             // Typing text
             typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 100; // Normal speed when typing
+            typingSpeed = 100;
         }
 
-        // Check if word is complete
+        // Word completion logic
         if (!isDeleting && charIndex === currentWord.length) {
-            // Pause at the end of word
-            typingSpeed = 2000;
+            typingSpeed = 1500;
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
-            // Move to next word
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500; // Pause before starting next word
+            typingSpeed = 500;
         }
 
         setTimeout(type, typingSpeed);
     }
 
-    // Start the typing animation
-    type();
-});
+    // Start typing animation
+    if (typewriterElement) type();
 
-// Mobile menu toggle
-const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+    // Mobile menu toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Header scroll effect
-const header = document.getElementById('header');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.setAttribute('aria-expanded',
+                navLinks.classList.contains('active'));
+        });
     }
-});
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    // Header scroll effect
+    const header = document.getElementById('header');
 
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+    function updateHeader() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
 
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+    // Throttle scroll events for performance
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                updateHeader();
+                scrollTimeout = null;
+            }, 100);
+        }
+    });
 
-            // Close mobile menu if open
+    // Close mobile menu when clicking links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
+                mobileMenu.setAttribute('aria-expanded', 'false');
             }
-        }
+        });
     });
-});
 
-// Timeline animation on scroll
-const timelineItems = document.querySelectorAll('.timeline-item');
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animations
+    document.querySelectorAll('.skill-category, .project-card').forEach(el => {
+        observer.observe(el);
     });
-}, { threshold: 0.3 });
 
-timelineItems.forEach(item => {
-    observer.observe(item);
-});
+    // Smooth scroll polyfill for older browsers
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-// Simple form submission handler
-document.querySelector('.contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    this.reset();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const headerHeight = header.offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+                window.scrollTo({
+                    top: targetPosition - headerHeight,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Initialize
+    updateHeader();
 });
