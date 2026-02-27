@@ -1,227 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nur Fikri bin Musa | Software Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Fikri - Software Developer in C,C++">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header & Navigation -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <i class="fas fa-microchip"></i>
-                    <span>Nur Fikri Bin Musa</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#articles">Articles</a></li>
-                </ul>
-                <button class="mobile-menu" aria-label="Toggle menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="typewriter" id="typewriter-text"></h1>
-                <p class="hero-subtitle">"Every line of code tells a story."</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn">Explore My Projects</a>
-                    <a href="#about" class="btn btn-outline">Learn About Me</a>
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nur Fikri bin Musa | Software Developer Portfolio</title>
+        <meta name="description"
+            content="Portfolio of Fikri - Software Developer in C,C++">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Header & Navigation -->
+        <header id="header">
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <i class="fas fa-microchip"></i>
+                        <span>Nur Fikri Bin Musa</span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                    </ul>
+                    <button class="mobile-menu" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Software Developer</h3>
-                    <p class="justified">As an Electronics Engineering graduate with experience in photonic research, my career began at the intersection of hardware and software, prototyping IoT devices and machine vision systems. A sudden career shift during the pandemic ignited my passion for deep learning in computer vision, successfully pivoting me into the tech industry.</p>
-                    <p class="justified">My journey has taken me from building embedded systems to developing backend data solutions for AI hardware. I'm passionate about writing clean, efficient code and am currently expanding my expertise by learning modern C++ (11/14/17). I am eager to collaborate on innovative and challenging projects, leveraging my full-stack embedded expertise to contribute from concept to deployment.</p>
-                    <p class="justified">When I'm not coding, you can find me fueling my growth with self-help and professional development books.</p>
-                </div>
-                <div class="about-image">
-                    <img class="rounded-pic" src="unnamed.jpg" alt="Fikri Musa - Software Developer" width="300" height="300">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section section-alt" id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">Modern C++ (11/14/17)</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>Hardware & Embedded</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Raspberry Pi</span>
-                        <span class="skill-tag">Arduino</span>
-                        <span class="skill-tag">nRF52840</span>
-                        <span class="skill-tag">Embedded Systems</span>
-                        <span class="skill-tag">RTOS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-wifi"></i></div>
-                    <h3>IoT & Connectivity</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">IoT Solutions</span>
-                        <span class="skill-tag">MQTT</span>
-                        <span class="skill-tag">BLE</span>
-                        <span class="skill-tag">Node-RED</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI & Data</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-items">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Linux</span>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="typewriter" id="typewriter-text"></h1>
+                    <p
+                        class="hero-subtitle">"Every line of code tells a story."</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn">Explore My Projects</a>
+                        <a href="#about" class="btn btn-outline">Learn About
+                            Me</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <div class="container">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Raspberry Pi Sensor Integration & AI Dashboard</h3>
-                    <p>Interfacing three different sensors with Raspberry Pi through different protocols, presenting the sensor data and integrating an AI model on a dashboard.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>JavaScript</span>
-                        <span>Raspberry Pi</span>
-                        <span>Computer Vision</span>
-                        <span>Node-RED</span>
-                        <span>MQTT</span>
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Software Developer</h3>
+                        <p class="justified">As an Electronics Engineering
+                            graduate with experience in photonic research, my
+                            career began at the intersection of hardware and
+                            software, prototyping IoT devices and machine vision
+                            systems. A sudden career shift during the pandemic
+                            ignited my passion for deep learning in computer
+                            vision, successfully pivoting me into the tech
+                            industry.</p>
+                        <p class="justified">I recently started a new chapter as
+                            a developer for trading systems. I'm diving deep
+                            into modern C++ (11/14/17) in Linux environments,
+                            working with servers and databases where performance
+                            and reliability are critical. Every day I'm learning
+                            how low-latency systems work and honestly, it's both
+                            challenging and thrilling.</p>
+                        <p class="justified">I bring my systems-thinking from
+                            embedded days, and I'm hungry to absorb everything
+                            about high-performance computing. When I'm not
+                            debugging or reading C++ reference docs, you can
+                            find me fueling my growth with self-help and
+                            professional development books.</p>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/fikrimusa/CDLE-Mini-Project" class="btn btn-small">View Details</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Universal MQTT Data Historian</h3>
-                    <p>A real-time IoT data storage platform that captures MQTT messages and stores them in SQLite database for historical analysis and data persistence.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>MQTT</span>
-                        <span>SQL</span>
-                        <span>SQLite</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/fikrimusa/UniversalMQTTDataHistorian" class="btn btn-small">View Details</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Smartwatch Simulator</h3>
-                    <p>Simulate a smartwatch with FreeRTOS tasks using ESP-IDF's QEMU emulator (no hardware needed). Demonstrates real-time OS concepts.</p>
-                    <div class="project-tech">
-                        <span>C</span>
-                        <span>FreeRTOS</span>
-                        <span>QEMU</span>
-                        <span>ESP32 Emulator</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/fikrimusa/smartwatch_simulator" class="btn btn-small">View Details</a>
+                    <div class="about-image">
+                        <img class="rounded-pic" src="unnamed.jpg"
+                            alt="Fikri Musa - Software Developer">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Articles Section -->
-    <section class="section section-alt" id="articles">
-        <div class="container">
-            <div class="blog-preview">
-                <h3>Time Machine = Knowledge</h3>
-                <p>Dive into my five-part LinkedIn series exploring how knowledge functions as our ultimate time machine, connecting past, present and future into one coherent system.</p>
-                <div class="chapter-buttons">
-                    <a href="https://www.linkedin.com/pulse/equation-solved-time-machine-knowledge-fikri-musa-14mac/?trackingId=bEFePWqNQLyvy36AzP8nhA%3D%3D" target="_blank" class="btn btn-chapter">Chapter 1</a>
-                    <a href="https://www.linkedin.com/pulse/first-pillar-past-fikri-musa-echnc/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D" target="_blank" class="btn btn-chapter">Chapter 2</a>
-                    <a href="https://www.linkedin.com/pulse/second-pillar-present-fikri-musa-hwq7c/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D" target="_blank" class="btn btn-chapter">Chapter 3</a>
-                    <a href="https://www.linkedin.com/pulse/third-pillar-future-fikri-musa-zqn2c/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D" target="_blank" class="btn btn-chapter">Chapter 4</a>
-                    <a href="https://www.linkedin.com/pulse/equation-complete-past-present-future-one-system-fikri-musa-vdqec/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D" target="_blank" class="btn btn-chapter">Chapter 5</a>
+        <!-- Skills Section -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-icon"><i
+                                class="fas fa-code"></i></div>
+                        <h3>Programming Languages</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Modern C++ (11/14/17)</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i
+                                class="fas fa-microchip"></i></div>
+                        <h3>Hardware & Embedded</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">nRF52840</span>
+                            <span class="skill-tag">ESP32</span>
+                            <span class="skill-tag">ESP8266</span>
+                            <span class="skill-tag">Communication
+                                Protocol</span>
+                            <span class="skill-tag">RTOS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i
+                                class="fas fa-wifi"></i></div>
+                        <h3>IoT & Connectivity</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag">MQTT</span>
+                            <span class="skill-tag">Blutooth Low Energy</span>
+                            <span class="skill-tag">Node-RED</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i
+                                class="fas fa-brain"></i></div>
+                        <h3>Artificial Intelligence</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Deep Learning</span>
+                            <span class="skill-tag">Computer Vision</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i
+                                class="fas fa-tools"></i></div>
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon"><i
+                                class="fas fa-database"></i></div>
+                        <h3>Databases</h3>
+                        <div class="skill-items">
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Nur Fikri bin Musa</h3>
-                    <p>Software Developer in C/C++</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/fikrimusa" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/fikrimusa/" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Selected Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Raspberry Pi Sensor Integration & AI Dashboard</h3>
+                        <p>Interfacing three different sensors with Raspberry Pi
+                            through different protocols, presenting the sensor
+                            data and integrating an AI model on a dashboard.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>Raspberry Pi</span>
+                            <span>Computer Vision</span>
+                            <span>Node-RED</span>
+                            <span>MQTT</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/fikrimusa/CDLE-Mini-Project"
+                                class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Universal MQTT Data Historian</h3>
+                        <p>A real-time IoT data storage platform that captures
+                            MQTT messages and stores them in SQLite database for
+                            historical analysis and data persistence.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>MQTT</span>
+                            <span>SQL</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/fikrimusa/UniversalMQTTDataHistorian"
+                                class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Smartwatch Simulator</h3>
+                        <p>Simulate a smartwatch with FreeRTOS tasks using
+                            ESP-IDF's QEMU emulator (no hardware needed).
+                            Demonstrates real-time OS concepts.</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>FreeRTOS</span>
+                            <span>QEMU</span>
+                            <span>ESP32 Emulator</span>
+                        </div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/fikrimusa/smartwatch_simulator"
+                                class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Fikri. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="script.js"></script>
-</body>
+        <!-- Articles Section -->
+        <section class="section section-alt" id="articles">
+            <div class="container">
+                <div class="blog-preview">
+                    <h3>Time Machine = Knowledge</h3>
+                    <p>Dive into my five-part LinkedIn series exploring how
+                        knowledge functions as our ultimate time machine,
+                        connecting past, present and future into one coherent
+                        system.</p>
+                    <div class="chapter-buttons">
+                        <a
+                            href="https://www.linkedin.com/pulse/equation-solved-time-machine-knowledge-fikri-musa-14mac/?trackingId=bEFePWqNQLyvy36AzP8nhA%3D%3D"
+                            target="_blank" class="btn btn-chapter">Chapter
+                            1</a>
+                        <a
+                            href="https://www.linkedin.com/pulse/first-pillar-past-fikri-musa-echnc/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
+                            target="_blank" class="btn btn-chapter">Chapter
+                            2</a>
+                        <a
+                            href="https://www.linkedin.com/pulse/second-pillar-present-fikri-musa-hwq7c/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
+                            target="_blank" class="btn btn-chapter">Chapter
+                            3</a>
+                        <a
+                            href="https://www.linkedin.com/pulse/third-pillar-future-fikri-musa-zqn2c/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
+                            target="_blank" class="btn btn-chapter">Chapter
+                            4</a>
+                        <a
+                            href="https://www.linkedin.com/pulse/equation-complete-past-present-future-one-system-fikri-musa-vdqec/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
+                            target="_blank" class="btn btn-chapter">Chapter
+                            5</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h3>Nur Fikri bin Musa</h3>
+                        <p>Software Developer in C/C++</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/fikrimusa"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/fikrimusa/"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Fikri. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>

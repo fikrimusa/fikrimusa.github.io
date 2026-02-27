@@ -61,15 +61,15 @@ section {
     color: var(--text-primary);
 }
 
-    .section-title::after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 4px;
-        background: linear-gradient(90deg, var(--wine), var(--accent));
-        margin: 15px auto;
-        border-radius: 2px;
-    }
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--wine), var(--accent));
+    margin: 15px auto;
+    border-radius: 2px;
+}
 
 /* Typography */
 .justified {
@@ -99,25 +99,25 @@ h1, h2, h3, h4 {
     font-size: 1rem;
 }
 
-    .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        transition: 0.5s;
-    }
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
 
-    .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-hover);
-    }
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
 
-        .btn:hover::before {
-            left: 100%;
-        }
+.btn:hover::before {
+    left: 100%;
+}
 
 .btn-outline {
     background: transparent;
@@ -125,10 +125,10 @@ h1, h2, h3, h4 {
     color: var(--wine);
 }
 
-    .btn-outline:hover {
-        background: var(--wine);
-        color: var(--dutch-white);
-    }
+.btn-outline:hover {
+    background: var(--wine);
+    color: var(--dutch-white);
+}
 
 .btn-small {
     padding: 8px 20px;
@@ -143,10 +143,10 @@ h1, h2, h3, h4 {
     border: 1px solid var(--border);
 }
 
-    .btn-chapter:hover {
-        background: var(--wine);
-        border-color: var(--wine);
-    }
+.btn-chapter:hover {
+    background: var(--wine);
+    border-color: var(--wine);
+}
 
 /* Header */
 header {
@@ -161,10 +161,10 @@ header {
     transition: var(--transition);
 }
 
-    header.scrolled {
-        padding: 15px 0;
-        box-shadow: var(--shadow);
-    }
+header.scrolled {
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+}
 
 nav {
     display: flex;
@@ -181,9 +181,9 @@ nav {
     gap: 10px;
 }
 
-    .logo i {
-        color: var(--wine);
-    }
+.logo i {
+    color: var(--wine);
+}
 
 .nav-links {
     display: flex;
@@ -191,33 +191,33 @@ nav {
     gap: 30px;
 }
 
-    .nav-links a {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-weight: 500;
-        padding: 8px 0;
-        position: relative;
-        transition: var(--transition);
-    }
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: var(--transition);
+}
 
-        .nav-links a:hover {
-            color: var(--dutch-white);
-        }
+.nav-links a:hover {
+    color: var(--dutch-white);
+}
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--wine), var(--accent));
-            transition: width 0.3s ease;
-        }
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--wine), var(--accent));
+    transition: width 0.3s ease;
+}
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+.nav-links a:hover::after {
+    width: 100%;
+}
 
 .mobile-menu {
     display: none;
@@ -239,15 +239,15 @@ nav {
     overflow: hidden;
 }
 
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 30% 20%, rgba(114, 47, 55, 0.1) 0%, transparent 50%);
-    }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(114, 47, 55, 0.1) 0%, transparent 50%);
+}
 
 .hero-content {
     position: relative;
@@ -319,9 +319,9 @@ nav {
     transition: var(--transition);
 }
 
-    .rounded-pic:hover {
-        transform: scale(1.02);
-    }
+.rounded-pic:hover {
+    transform: scale(1.02);
+}
 
 /* Skills Section */
 .skills-grid {
@@ -338,11 +338,11 @@ nav {
     border: 1px solid var(--border);
 }
 
-    .skill-category:hover {
-        transform: translateY(-5px);
-        border-color: var(--wine);
-        box-shadow: var(--shadow-hover);
-    }
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--wine);
+    box-shadow: var(--shadow-hover);
+}
 
 .skill-icon {
     font-size: 2.5rem;
@@ -373,10 +373,10 @@ nav {
     transition: var(--transition);
 }
 
-    .skill-tag:hover {
-        background: rgba(114, 47, 55, 0.4);
-        transform: translateY(-2px);
-    }
+.skill-tag:hover {
+    background: rgba(114, 47, 55, 0.4);
+    transform: translateY(-2px);
+}
 
 /* Projects Section */
 .projects-grid {
@@ -396,23 +396,23 @@ nav {
     height: 100%;
 }
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--wine);
-        box-shadow: var(--shadow-hover);
-    }
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--wine);
+    box-shadow: var(--shadow-hover);
+}
 
-    .project-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-        color: var(--dutch-white);
-    }
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--dutch-white);
+}
 
-    .project-card p {
-        color: var(--text-secondary);
-        margin-bottom: 20px;
-        flex-grow: 1;
-    }
+.project-card p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
 
 .project-tech {
     display: flex;
@@ -421,14 +421,14 @@ nav {
     margin-bottom: 20px;
 }
 
-    .project-tech span {
-        background: rgba(114, 47, 55, 0.2);
-        color: var(--dutch-white);
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        border: 1px solid rgba(114, 47, 55, 0.3);
-    }
+.project-tech span {
+    background: rgba(114, 47, 55, 0.2);
+    color: var(--dutch-white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(114, 47, 55, 0.3);
+}
 
 .project-links {
     margin-top: auto;
@@ -444,18 +444,18 @@ nav {
     box-shadow: var(--shadow);
 }
 
-    .blog-preview h3 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: var(--dutch-white);
-    }
+.blog-preview h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dutch-white);
+}
 
-    .blog-preview p {
-        color: var(--text-secondary);
-        max-width: 600px;
-        margin: 0 auto 30px;
-        font-size: 1.1rem;
-    }
+.blog-preview p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
 
 .chapter-buttons {
     display: flex;
@@ -497,25 +497,25 @@ footer {
     gap: 20px;
 }
 
-    .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        background: var(--card-bg-light);
-        border-radius: 50%;
-        color: var(--text-secondary);
-        font-size: 1.3rem;
-        transition: var(--transition);
-        border: 1px solid var(--border);
-    }
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--card-bg-light);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
 
-        .social-links a:hover {
-            background: var(--wine);
-            color: var(--dutch-white);
-            transform: translateY(-3px);
-        }
+.social-links a:hover {
+    background: var(--wine);
+    color: var(--dutch-white);
+    transform: translateY(-3px);
+}
 
 .footer-bottom {
     text-align: center;
@@ -556,9 +556,9 @@ footer {
         border-bottom: 1px solid var(--border);
     }
 
-        .nav-links.active {
-            display: flex;
-        }
+    .nav-links.active {
+        display: flex;
+    }
 
     .mobile-menu {
         display: block;
@@ -629,6 +629,7 @@ footer {
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
