@@ -1,6 +1,4 @@
-// Optimized JavaScript for Portfolio
 document.addEventListener('DOMContentLoaded', () => {
-  // Typewriter Effect
   const typewriterElement = document.getElementById('typewriter-text')
   const words = [
     'Software Developer',
@@ -16,18 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentWord = words[wordIndex]
 
     if (isDeleting) {
-      // Deleting text
       typewriterElement.textContent = currentWord.substring(0, charIndex - 1)
       charIndex--
       typingSpeed = 50
     } else {
-      // Typing text
       typewriterElement.textContent = currentWord.substring(0, charIndex + 1)
       charIndex++
       typingSpeed = 100
     }
 
-    // Word completion logic
     if (!isDeleting && charIndex === currentWord.length) {
       typingSpeed = 1500
       isDeleting = true
@@ -40,10 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, typingSpeed)
   }
 
-  // Start typing animation
   if (typewriterElement) type()
 
-  // Mobile menu toggle
   const mobileMenu = document.querySelector('.mobile-menu')
   const navLinks = document.querySelector('.nav-links')
 
@@ -55,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  // Header scroll effect
   const header = document.getElementById('header')
 
   function updateHeader () {
@@ -66,8 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Throttle scroll events for performance
-  let scrollTimeout
+  let scrollTimeout = null
   window.addEventListener('scroll', () => {
     if (!scrollTimeout) {
       scrollTimeout = setTimeout(() => {
@@ -77,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  // Close mobile menu when clicking links
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       if (navLinks.classList.contains('active')) {
@@ -87,26 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  // Intersection Observer for animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in')
-      }
-    })
-  }, observerOptions)
-
-  // Observe elements for animations
-  document.querySelectorAll('.skill-category, .project-card').forEach(el => {
-    observer.observe(el)
-  })
-
-  // Smooth scroll polyfill for older browsers
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
@@ -117,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId)
       if (targetElement) {
         const headerHeight = header.offsetHeight
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY
 
         window.scrollTo({
           top: targetPosition - headerHeight,
@@ -127,6 +97,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  // Initialize
   updateHeader()
 })
