@@ -27,9 +27,8 @@
                     <ul class="nav-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#skills">Skills</a></li>
                     </ul>
                     <button class="mobile-menu" aria-label="Toggle menu">
                         <i class="fas fa-bars"></i>
@@ -61,27 +60,27 @@
                 <div class="about-content">
                     <div class="about-text">
                         <h3>Software Developer</h3>
-                        <p class="justified">As an Electronics Engineering
-                            graduate with experience in photonic research, my
-                            career began at the intersection of hardware and
-                            software, prototyping IoT devices and machine vision
-                            systems. A sudden career shift during the pandemic
-                            ignited my passion for deep learning in computer
-                            vision, successfully pivoting me into the tech
-                            industry.</p>
-                        <p class="justified">I recently started a new chapter as
-                            a developer for trading systems. I'm diving deep
-                            into modern C++ (11/14/17) in Linux environments,
-                            working with servers and databases where performance
-                            and reliability are critical. Every day I'm learning
-                            how low-latency systems work and honestly, it's both
-                            challenging and thrilling.</p>
-                        <p class="justified">I bring my systems-thinking from
-                            embedded days, and I'm hungry to absorb everything
-                            about high-performance computing. When I'm not
-                            debugging or reading C++ reference docs, you can
-                            find me fueling my growth with self-help and
-                            professional development books.</p>
+                        <p class="justified">I am an Electronics Engineering
+                            graduate and software engineer with experience across
+                            embedded systems, firmware development, IoT, computer
+                            vision, and trading systems. My work combines a
+                            systems mindset with practical software engineering,
+                            from connecting sensors and devices to building and
+                            maintaining reliable internal tools.</p>
+                        <p class="justified">Currently, I develop and maintain
+                            trading-system components and tooling in C++ and C#.
+                            I work on backend-to-frontend features, JSON-based
+                            data extraction, and Linux/VPS deployments, including
+                            scheduling and automating trading binaries with cron
+                            across staging environments.</p>
+                        <p class="justified">My earlier roles gave me hands-on
+                            experience with ESP32 and nRF52840 firmware, Zephyr
+                            RTOS, MQTT, BLE, and secure device communication. I
+                            have also built Raspberry Pi IoT platforms and worked
+                            with machine learning, deep learning, and computer
+                            vision. I enjoy solving complex problems with C,
+                            modern C++, Python, and a steady curiosity for how
+                            systems work end to end.</p>
                     </div>
                     <div class="about-image">
                         <img class="rounded-pic" src="unnamed.jpg"
@@ -178,21 +177,25 @@
                 <h2 class="section-title">Selected Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>Raspberry Pi Sensor Integration & AI Dashboard</h3>
-                        <p>Interfacing three different sensors with Raspberry Pi
-                            through different protocols, presenting the sensor
-                            data and integrating an AI model on a dashboard.</p>
+                        <h3>PulseGuard API</h3>
+                        <p>A backend uptime-monitoring portfolio project built
+                            with ASP.NET Core and PostgreSQL. JWT authentication
+                            protects user-owned monitors, while a hosted
+                            background worker checks configured URLs, records
+                            response results, and opens an alert after three
+                            consecutive failures.</p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>JavaScript</span>
-                            <span>Raspberry Pi</span>
-                            <span>Computer Vision</span>
-                            <span>Node-RED</span>
-                            <span>MQTT</span>
+                            <span>ASP.NET Core</span>
+                            <span>C#</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT</span>
+                            <span>Docker Compose</span>
+                            <span>Swagger</span>
+                            <span>GitHub Actions</span>
                         </div>
                         <div class="project-links">
                             <a
-                                href="https://github.com/fikrimusa/CDLE-Mini-Project"
+                                href="https://github.com/fikrimusa/PulseGuardAPI"
                                 class="btn btn-small">View Details</a>
                         </div>
                     </div>
@@ -216,109 +219,23 @@
                     </div>
 
                     <div class="project-card">
-                        <h3>Smartwatch Simulator</h3>
-                        <p>Simulate a smartwatch with FreeRTOS tasks using
-                            ESP-IDF's QEMU emulator (no hardware needed).
-                            Demonstrates real-time OS concepts.</p>
+                        <h3>Raspberry Pi Sensor Integration & AI Dashboard</h3>
+                        <p>Interfacing three different sensors with Raspberry Pi
+                            through different protocols, presenting the sensor
+                            data and integrating an AI model on a dashboard.</p>
                         <div class="project-tech">
-                            <span>C</span>
-                            <span>FreeRTOS</span>
-                            <span>QEMU</span>
-                            <span>ESP32 Emulator</span>
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>Raspberry Pi</span>
+                            <span>Computer Vision</span>
+                            <span>Node-RED</span>
+                            <span>MQTT</span>
                         </div>
                         <div class="project-links">
                             <a
-                                href="https://github.com/fikrimusa/smartwatch_simulator"
+                                href="https://github.com/fikrimusa/CDLE-Mini-Project"
                                 class="btn btn-small">View Details</a>
                         </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>TCP Echo Server</h3>
-                        <p>TCP chat server with login authentication built in
-                            C++17, supporting multiple clients over a
-                            persistent TCP connection.</p>
-                        <div class="project-tech">
-                            <span>C++17</span>
-                            <span>TCP/IP</span>
-                            <span>Networking</span>
-                        </div>
-                        <div class="project-links">
-                            <a
-                                href="https://github.com/fikrimusa/tcp_echo_server"
-                                class="btn btn-small">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Smart Vending Machine Manager</h3>
-                        <p>WPF desktop app for managing IoT vending machines,
-                            built with .NET 8 and the MVVM architecture
-                            pattern.</p>
-                        <div class="project-tech">
-                            <span>C#</span>
-                            <span>.NET 8</span>
-                            <span>WPF</span>
-                            <span>MVVM</span>
-                            <span>IoT</span>
-                        </div>
-                        <div class="project-links">
-                            <a
-                                href="https://github.com/fikrimusa/SmartVendingMachineManager"
-                                class="btn btn-small">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Qt Notepad Application</h3>
-                        <p>A simple notepad application built with the Qt
-                            framework in C++, featuring core text editing
-                            functionality.</p>
-                        <div class="project-tech">
-                            <span>C++</span>
-                            <span>Qt</span>
-                            <span>GUI</span>
-                        </div>
-                        <div class="project-links">
-                            <a
-                                href="https://github.com/fikrimusa/Qt_NotepadApplication"
-                                class="btn btn-small">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Articles Section -->
-        <section class="section section-alt" id="articles">
-            <div class="container">
-                <div class="blog-preview">
-                    <h3>Time Machine = Knowledge</h3>
-                    <p>Dive into my five-part LinkedIn series exploring how
-                        knowledge functions as our ultimate time machine,
-                        connecting past, present and future into one coherent
-                        system.</p>
-                    <div class="chapter-buttons">
-                        <a
-                            href="https://www.linkedin.com/pulse/equation-solved-time-machine-knowledge-fikri-musa-14mac/?trackingId=bEFePWqNQLyvy36AzP8nhA%3D%3D"
-                            target="_blank" class="btn btn-chapter">Chapter
-                            1</a>
-                        <a
-                            href="https://www.linkedin.com/pulse/first-pillar-past-fikri-musa-echnc/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
-                            target="_blank" class="btn btn-chapter">Chapter
-                            2</a>
-                        <a
-                            href="https://www.linkedin.com/pulse/second-pillar-present-fikri-musa-hwq7c/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
-                            target="_blank" class="btn btn-chapter">Chapter
-                            3</a>
-                        <a
-                            href="https://www.linkedin.com/pulse/third-pillar-future-fikri-musa-zqn2c/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
-                            target="_blank" class="btn btn-chapter">Chapter
-                            4</a>
-                        <a
-                            href="https://www.linkedin.com/pulse/equation-complete-past-present-future-one-system-fikri-musa-vdqec/?trackingId=yuB0uJO5SVOGSV9%2FO%2FAyxg%3D%3D"
-                            target="_blank" class="btn btn-chapter">Chapter
-                            5</a>
                     </div>
                 </div>
             </div>
